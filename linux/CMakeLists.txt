@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
-set(BINARY_NAME "media_player")
-set(APPLICATION_ID "com.example.media_player")
+set(BINARY_NAME "Media Player")
+set(APPLICATION_ID "com.example.media.player")
 
 cmake_policy(SET CMP0063 NEW)
 

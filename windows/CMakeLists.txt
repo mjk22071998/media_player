@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(media_player LANGUAGES CXX)
 
-set(BINARY_NAME "media_player")
+set(BINARY_NAME "Media Player")
 
 cmake_policy(SET CMP0063 NEW)
 

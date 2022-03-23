@@ -1,6 +1,6 @@
 {
-    "name": "media_player",
-    "short_name": "media_player",
+    "name": "Media Player",
+    "short_name": "Media Player",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
