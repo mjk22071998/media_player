@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,14 +12,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Media Player',
       theme: ThemeData(
-          colorScheme: const ColorScheme.light(
-              primary: Colors.teal,
-              primaryContainer: Colors.tealAccent,
-              secondary: Colors.purple,
-              secondaryContainer: Colors.purpleAccent)),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+        colorScheme: const ColorScheme.light(
+          primary: Colors.teal,
+          primaryContainer: Colors.tealAccent,
+          secondary: Colors.deepPurple,
+          secondaryContainer: Colors.deepPurpleAccent,
+        ),
+      ),
+      home: const MyHomePage(title: 'Flutter Media Player'),
     );
   }
 }
@@ -32,17 +35,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(widget.title),
-      ),
-      body: const Center(
-        child: Text("Hello World"),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body: Center(
+        child : Lottie.asset("assets/splash.json")
+      )
     );
   }
 }
