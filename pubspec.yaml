@@ -36,6 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   lottie: ^1.2.2
   audioplayer: ^0.8.1
+  video_player: ^2.6.0
+  file_picker: ^5.2.6
+  path_provider: ^2.0.14
+  permission_handler: ^10.2.0
 
 dev_dependencies:
   flutter_test:

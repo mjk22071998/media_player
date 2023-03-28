@@ -14,18 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: "/",
-      routes: {
-        "/": (context) => const MyHomePage(title: 'Flutter Media Player'),
-        "/home": (context) => const MainActivity()
-      },
+      routes: {"/main": (context) => MainActivity()},
       title: 'Media Player',
       theme: ThemeData(
-        colorScheme: const ColorScheme.light(
-          primary: Colors.teal,
-          primaryContainer: Colors.tealAccent,
-          secondary: Colors.deepPurple,
-          secondaryContainer: Colors.deepPurpleAccent,
-        ),
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
       ),
       home: const MyHomePage(title: 'Flutter Media Player'),
     );
@@ -48,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     _controller = AnimationController(vsync: this);
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        Navigator.pushReplacementNamed(context, "/home");
+        Navigator.pushReplacementNamed(context, "/main");
       }
     });
     super.initState();
@@ -63,6 +56,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       controller: _controller,
       onLoaded: (p0) {
         _controller.duration = p0.duration;
+        print("object");
+        _controller.forward();
       },
     )));
   }
